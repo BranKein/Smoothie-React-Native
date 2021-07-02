@@ -8,14 +8,16 @@ const Container = Styled.View`
     justify-content: center;
 `;
 
-const Label = Styled.Text``;
+const Label = Styled.Text`
+    color: #000;
+`;
 
 interface Props {}
 
 const EmptyItem = ({}: Props) => {
     return (
         <Container>
-            <Label>하단에 "+" 버튼을 눌러 새로운 할 일을 등록해 본다.</Label>
+            <Label>하단에 "+" 버튼을 눌러 새로운 할 일을 등록해 본다</Label>
         </Container>
     );
 };

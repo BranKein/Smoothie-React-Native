@@ -9,6 +9,7 @@ const Input = Styled.TextInput`
     height: 40px;
     background-color: #FFF;
     padding: 0px 8px;
+    color: #000;
 `;
 
 interface Props {
@@ -20,11 +21,11 @@ const TextInput = ({hideTodoInput}: Props) => {
     return (
         <Input
             autoFocus={true}
-            autoCapitalize={"none"}
+            autoCapitalize="none"
             autoCorrect={false}
-            placeholder={"할 일을 입력한다"}
-            returnKeyType={"done"}
-            onSubmitEditing={(nativeEvent: any) => {
+            placeholder="할 일을 입력한다"
+            returnKeyType="done"
+            onSubmitEditing={({ nativeEvent }) => {
                 addTodoList(nativeEvent.text);
                 hideTodoInput();
             }}
